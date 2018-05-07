@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta http-equiv="Content-Type" content="text/x-component" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>本周总结</title>
+		<link rel="stylesheet" href="../css/timeManger.css" />
+		<link href="../../../css/start_common.css" rel="stylesheet">
+	  <link rel="stylesheet" href="../../../css/start_applyForLoan.css">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<!-- 切换时效果 -->
+		<script type="text/javascript" src="../js/jquery.SuperSlide2.1.2.js"></script>
+	</head>
+	<body>
+		<!--页面最大的div-->
+	  <div class="content start_deliveryForm">
+	  <!--包含白色标题和灰色小横条部分-->
+			<!--下一周期-->
+	   <input type="button" class="enterNext common_1">
+
+		<!--时间管理开始-->
+		<div class="time">
+			<div class="about_content history">
+				<h2>本周期总结</h2>
+				<p class="about_txt">按照操作顺序排列</p>
+			</div>
+			<div class="event_box">
+				<div class="space_div">
+					<p class="left_space"></p>
+					<p class="right_space"></p>
+				</div>
+				<div class="parHd clearfix">
+					<ul>
+						<li class="act"><span></span>投放广告</li>
+						<li><span></span>购买原材料</li>
+						<li><span></span>生产产品</li>
+						<li><span></span>厂房建造</li>
+						<li><span></span>生产线建造</li>
+						<li><span></span>产品研发</li>
+						<li><span></span>认证开发</li>
+						<li><span></span>贷款管理</li>
+					</ul>
+					<a class="sPrev"><img src="../images/left_ico.png" alt="" title=""></a>
+					<a class="sNext"><img src="../images/right_ico.png" alt="" title=""></a>
+				</div>
+				<div class="parBd clearfix">
+					<div class="slideBox" id="ad">
+					 	<h4>
+							<!-- 投放广告板块 -->
+						</h4>
+						<p>
+							<!-- 投放广告板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;" id="raw">
+						<h4>
+							<!-- 购买原材料板块 -->
+						</h4>
+						<p>
+							<!-- 购买原材料板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;"id="product">
+						<h4>
+							<!-- 生产产品板块 -->
+						</h4>
+						<p>
+							<!-- 生产产品板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;" id="factory">
+						<h4>
+							<!-- 厂房建造板块 -->
+						</h4>
+						<p>
+							<!-- 厂房建造板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;" id="line">
+						<h4>
+							<!-- 生产线建造板块 -->
+						</h4>
+						<p>
+							<!-- 生产线建造板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;"id="research">
+						<h4>
+							<!-- 产品研发板块 -->
+						</h4>
+						<p>
+							<!-- 产品研发板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;" id="develop">
+						<h4>
+							<!-- 认证开发板块 -->
+						</h4>
+						<p>
+							<!-- 认证开发板块 -->
+						</p>
+					</div>
+					<div class="slideBox" style="display: none;" id="loan">
+						<h4>
+							<!-- 贷款管理板块 -->
+						</h4>
+						<p>
+							<!-- 贷款管理板块 -->
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--时间管理结束-->
+	</div>
+
+
+
+		<script>
+			$(function() {
+				jQuery(".event_box").slide({ titCell: ".parHd li", mainCell: ".parBd", defaultPlay: false, titOnClassName: "act", prevCell: ".sPrev", nextCell: ".sNext" });
+				jQuery(".parHd").slide({ mainCell: " ul", vis: 6, effect: "leftLoop", defaultPlay: false, prevCell: ".sPrev", nextCell: ".sNext" });
+			});
+		</script>
+		<script src="../../../js/commonPop.js"></script>
+		<script type="text/javascript" src="../../../js/timeManger.js">
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>税金管理</title>
+    <link href="../css/start_common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/start_applyForLoan.css" />
+
+</head>
+
+<body>
+<!--页面最大的div-->
+<div class="content divn">
+
+    <!--地方税务局-->
+    <div class="taxPay common">
+        <p>应交税金为：<span  class="pay">0.0</span>&nbsp;万</p>
+    </div>
+    <!--页面最大的div结束-->
+</div>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    //是写计算税金
+    $(function(){
+        $.get("taxAction!getTax.action?rnd="+Math.random(),{},function(data){
+            $(".pay").text(data.tax);
+        },"json");
+    });
+</script>
+</body>
+</html>

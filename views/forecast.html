@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>市场预测信息</title>
+    <link href="../css/start_common.css" rel="stylesheet"/>
+    <link href="../css/forecast.css" rel="stylesheet" />
+    <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/highcharts.js"></script>
+</head>
+<body>
+<!--页面最大的div-->
+<div class="content divn">
+    <!--主要部分-->
+    <div class="miancontent">
+        <p class="marketChose">
+            <span>请选择市场：</span>
+            <select>
+                <option value="local" selected="selected">本地市场</option>
+                <option value="region">区域市场</option>
+                <option value="domestic">国内市场</option>
+                <option value="Asia">亚洲市场</option>
+                <option value="international">国际市场</option>
+            </select>
+            <input type="button" value="查询" id="marketSearch" class="common_bgcolor common_color" />
+        </p>
+        <div class="img-content">
+            <!--本地市场需求量预测图-->
+            <div><div id="container1" style="min-width:800px;height:400px;"></div></div>
+            <!--本地市场销售价格预测图-->
+            <div class="marleft13"><div id="container2" style="min-width:800px;height:400px;"></div></div>
+        </div>
+        <!--主要部分结束-->
+    </div>
+    <!--页面最大的div结束-->
+</div>
+<script type="text/javascript" src="../js/highchartscolumn.js"></script>
+</body>
+</html>

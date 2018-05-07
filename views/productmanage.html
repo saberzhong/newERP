@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../assets/css/layui.css">
+	<link rel="stylesheet" href="../assets/css/view.css"/>
+	<title>ERP练习系统</title>
+    <link href="../css/start_common.css" rel="stylesheet"/>
+	<link href="../css/ProductDevelopment.css" rel="stylesheet" />
+    
+</head>
+<body class="layui-view-body">
+    <div class="layui-content">
+<!--主要部分-->
+<div class="page3_maincontent">
+		<!--研发完成的产品开始-->
+		<div class="market">
+        	<div class="hr-bar">
+				<span>研发完成的产品</span><div><hr /></div><img src="../images/hrfoot.gif"/>
+            </div>
+           <!-- 装图的大框开始-->
+			 <div class="big_div">
+            <div class="small_div"><img class="img_f1" src="../images/p1_f.gif"/><img class="img_s1" src="../images/p1_s.gif"/></div>
+             <div class="small_div"><img class="img_f2" src="../images/p2_f.gif"/><img class="img_s2" src="../images/p2_s.gif"/></div>
+            <div class="small_div"><img class="img_f3" src="../images/p3_f.gif"/><img class="img_s3" src="../images/p3_s.gif"/></div>
+            <div class="small_div"><img class="img_f4" src="../images/p4_f.gif"/><img class="img_s4" src="../images/p4_s.gif"/></div>
+           <!-- 装图的大框结束--> 
+             </div>
+			
+			<!--研发完成的产品结束-->
+		</div>
+		<!--研发中的产品开始-->
+		<div class="market">
+			<div class="hr-bar">
+				<span>研发中的产品</span><div><hr /></div><img src="../images/hrfoot.gif"/>
+            </div>
+			<!--研发中的产品开始点-->
+            <div class="develop_P">
+            <!--研发中的产品开始-->
+              <div class="market-bar Ping" id="hidden_Ping">
+				<ul class="market-ul hassixli">
+					<span class="img_Ping"></span>
+					<li><h3>产品名称</h3><h2></h2></li>
+					<li><h3>研发产品需要周期</h3><h2></h2></li>
+					<li><h3>每期研发费用</h3><h2></h2></li>
+					<li><h3>已完成研发周期</h3><h2></h2></li>
+					<li><h3>开始研发时间</h3><h2></h2></li>
+					<li><h3>当前状态</h3><h2 id="current">正在研发</h2></li>
+				</ul>
+				<a href="javascript:void(0);">
+					<div class="state current_btn begin" id="state">
+						<h2>暂停研发</h2>
+					</div>
+				</a>
+             <!--研发中的产品结束-->
+			</div>
+            
+            <!--研发中的产品结束点-->
+            </div>
+    
+			<!--研发中的产品结束-->
+		</div>
+        
+        
+		<!--研发新的产品开始-->
+		<div class="market">
+			<div class="hr-bar">
+				<span>研发新的产品</span><div><hr /></div>
+				<img src="../images/hrfoot.gif"/>
+            </div>
+            <div class="undevelop_p"></div>
+			   <!--研发新的产品P1开始-->
+			<div class="market-bar P clear1" id="hidden_P">
+				<ul class="market-ul hassixli">
+					<span class="img_P"></span>
+					<li><h3>产品名称</h3><h2></h2></li>
+					<li><h3>研发产品需要周期</h3><h2></h2></li>
+					<li><h3>每期研发费用</h3><h2></h2></li>
+				</ul>
+				<a href="javascript:void(0);">
+					<div class="state start1" id="un_state">
+						<h2>开始研发</h2>
+					</div>
+				</a>
+
+				<button class="layui-btn layui-btn-normal">下一步</button>
+
+
+				<!--研发新的产品P1结束-->
+             </div>
+                
+  
+			</div>
+			<!--研发新的产品结束-->
+		</div>
+	<!--主要部分结束-->
+ </div>
+ <script src="../js/jquery-1.9.1.min.js"></script>
+ <script src="../js/productdevelopment.js"></script>
+ <script>
+	var oState=$(".state");
+	for(var i=0;i<oState.length;i++){
+		oState[i].onmouseover=function(){
+			this.style.background="#d1ba74";
+		};
+		oState[i].onmouseout=function(){
+			this.style.background="#dbdad6";
+		};
+	}
+ </script>
+    </div>
+    <script src="../assets/layui.all.js"></script>
+    <script>
+        
+     let element = layui.element;
+        // layui.use('layer',function(){
+        //     var layer = layui.layer;
+        //     layer.open({
+        //         type:1,
+        //         title:"aaa",
+        //         content: "<h1>hello</h1>",
+        //         area:'1000px'
+        //     });
+  
+        //     layer.alert('ku',{icon:5});
+        //     layer.load(1);
+        //     layer.confirm('纳尼',{
+        //         btn:['按钮1','wagg']
+        //         ,btn3:function(){
+
+        //         }
+        //     })
+
+        // });
+    </script>
+</body>
+</html>

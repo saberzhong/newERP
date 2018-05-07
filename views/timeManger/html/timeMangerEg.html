@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta http-equiv="Content-Type" content="text/x-component" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>时间管理</title>
+		<link rel="stylesheet" href="../css/timeManger.css" />
+		<link href="../../../css/start_common.css" rel="stylesheet">
+	  <link rel="stylesheet" href="../../../css/start_applyForLoan.css">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<!-- 切换时效果 -->
+		<script type="text/javascript" src="../js/jquery.SuperSlide2.1.2.js"></script>
+	</head>
+	<body>
+		<!--页面最大的div-->
+	  <div class="content start_deliveryForm">
+	  <!--包含白色标题和灰色小横条部分-->
+	    <div class="trabecula">
+	    <!--白色写标题的部分-->
+	      <div class="trabecula-white">
+	        <span><h2>Process management&nbsp;&nbsp;&nbsp;<font>Time Management</font></h2></span>
+	    <!--白色写标题的部分结束-->
+	      </div>
+	    <!--灰色的小横条-->
+	    <div class="gray-trabecula">
+	      <!--小图标大小30px,33px-->
+	      <span><img src="../../../images/pic_time.jpg" /></span>
+	      <span><h4>Time Management</h4></span>
+	      <span>&nbsp;&nbsp;>&nbsp;&nbsp;</span>
+	      <!-- 这里需要设置 -->
+	      <span><h4>Process management</h4></span>
+	    <!--灰色的小横条结束-->
+	    </div>
+	  <!--包含白色标题和灰色小横条部分结束-->
+	    </div>
+	  <input type="button" class="enterNext common_1">
+
+		<!--时间管理开始-->
+		<div>
+			<!-- <div class="about_content history">
+				<h2>流程管理</h2>
+				<p class="about_txt">提醒用户进行相关操作</p>
+			</div> -->
+			<div class="event_box">
+				<div class="space_div">
+					<p class="left_space"></p>
+					<p class="right_space"></p>
+				</div>
+				<div class="parHd clearfix">
+					<ul>
+						<li class="act"><span></span>Advertise</li>
+						<li><span></span>materials</li>
+						<li><span></span>product</li>
+						<li><span></span>factory</li>
+						<li><span></span>line</li>
+						<li><span></span>Research</li>
+						<li><span></span>Authentication</li>
+						<li><span></span>loan</li>
+					</ul>
+					<a class="sPrev"><img src="../images/left_ico.png" alt="" title=""></a>
+					<a class="sNext"><img src="../images/right_ico.png" alt="" title=""></a>
+				</div>
+				<div class="parBd clearfix">
+					<div class="slideBox">
+						<h4>投放广告板块</h4>
+						<p>投放广告板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>购买原材料板块</h4>
+						<p>购买原材料板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>生产产品板块</h4>
+						<p>生产产品板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>厂房建造板块</h4>
+						<p>厂房建造板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>生产线建造板块</h4>
+						<p>生产线建造板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>产品研发板块</h4>
+						<p>产品研发板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>认证开发板块</h4>
+						<p>认证开发板块</p>
+					</div>
+					<div class="slideBox" style="display: none;">
+						<h4>贷款管理板块</h4>
+						<p>贷款管理板块</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--时间管理结束-->
+	</div>
+
+
+
+		<script>
+			$(function() {
+				jQuery(".event_box").slide({ titCell: ".parHd li", mainCell: ".parBd", defaultPlay: false, titOnClassName: "act", prevCell: ".sPrev", nextCell: ".sNext" });
+				jQuery(".parHd").slide({ mainCell: " ul", vis: 6, effect: "leftLoop", defaultPlay: false, prevCell: ".sPrev", nextCell: ".sNext" });
+			});
+		</script>
+		<script src="../../../js/commonPop.js"></script>
+	</body>
+</html>
