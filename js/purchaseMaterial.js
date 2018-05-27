@@ -74,12 +74,9 @@ $(function(){
 	
 });
 //是写计算税金
-$(function(){
+ $(function(){
 	$.get("",{},function(data){
 		$(".pay").text(data.taxPay);
 		});
 	
 	});
-
-
-
