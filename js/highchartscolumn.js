@@ -8,7 +8,7 @@ $(function(){
 	            type: 'column',
 				height: 400,
 			    width:500,
-
+				
 	        },
 			// 版权信息
 		    credits: {
@@ -20,7 +20,7 @@ $(function(){
 			  borderColor: '#000',
 			  y:15,
 			  x:30
-
+			 
 			 },
 			 // 标题
 	        title: {
@@ -53,25 +53,25 @@ $(function(){
                   fontWeight:"bold"
 				  }
 	            },
-
+				
 	        },
 			// 数据列
 	        series: [{
 				     name: 'P1',
-					data: [10]
+					data: []
 				},
 				{   name: 'P2',
-					data: [20]
+					data: []
 				},
 				{   name: 'P3',
-					data: [30]
+					data: []
 				},
 				{   name: 'P4',
-					data: [40]
-
+					data: []
+        
 	        }]
 	    });
-
+		
     // Set up the chart2
     var chart2= new Highcharts.Chart({
 			// 表格总属性
@@ -91,7 +91,7 @@ $(function(){
 			  borderColor: '#000',
 			  y:15,
 			  x:30
-
+			 
 			 },
 			 // 标题
 	        title: {
@@ -123,7 +123,7 @@ $(function(){
                   fontWeight:"bold"
 				  }
 	            }
-
+				 
 	        },
 			// 数据点配置
 		    plotOptions: {
@@ -146,18 +146,18 @@ $(function(){
 				},
 				{   name: 'P4',
 					data: []
-
+        
 				}],
-
-    });
-
-
+	  
+    });		
+	
+		
      // 加载内容
 	  function getContent(data){
 	  // 为图表1设置值
-            chart1.series[0].setData(data.mountMap.P1);
-			chart1.series[1].setData(data.mountMap.P2);
-			chart1.series[2].setData(data.mountMap.P3);
+            chart1.series[0].setData(data.mountMap.P1); 
+			chart1.series[1].setData(data.mountMap.P2); 
+			chart1.series[2].setData(data.mountMap.P3); 
 			chart1.series[3].setData(data.mountMap.P4);
 			// 设置最大最小值
 			chart1.yAxis[0].setExtremes(data.mountMap.mountMin-1, data.mountMap.mountMax);
@@ -169,11 +169,11 @@ $(function(){
 			chart1.yAxis[0].update({
 		    tickInterval:chart1.yAxis[0].tickInterval,
 			});
-
+	
 			 // 为图2表设置值
-            chart2.series[0].setData(data.priceMap.P1);
-			chart2.series[1].setData(data.priceMap.P2);
-			chart2.series[2].setData(data.priceMap.P3);
+            chart2.series[0].setData(data.priceMap.P1); 
+			chart2.series[1].setData(data.priceMap.P2); 
+			chart2.series[2].setData(data.priceMap.P3); 
 			chart2.series[3].setData(data.priceMap.P4);
 			// 设置最大最小值
 			chart2.yAxis[0].setExtremes(data.priceMap.priceMin-1,data.priceMap.priceMax+1);
@@ -186,47 +186,47 @@ $(function(){
 		    tickInterval:chart2.yAxis[0].tickInterval
 		  });
 	  }
-
+	  
 	 // 默认本地市场
-	  $.post("predictionAction!findPrediction.action",{"marketName":"本地市场"},function(data) {
+	  $.post("predictionAction!findPrediction.action",{"marketName":"本地市场"},function(data) { 
 		  getContent(data);
        },"json");
-
-
+	  
+	  
 	  // 绑定点击事件
 	$(document).on("click","input[id='marketSearch']",function(){
 	  if($("select").val()=="local"){
 		  // 外部加载json
-		 $.post("172.22.1.152:8080/erpm/predictionAction!findPrediction.action",{"marketName":"本地市场"},function(data) {
+		 $.post("predictionAction!findPrediction.action",{"marketName":"本地市场"},function(data) { 
 		  getContent(data);
        },"json");
 	  }
 	  else if($("select").val()=="region"){
 		   // 外部加载json
-		 $.post("172.22.1.152:8080/erpm/predictionAction!findPrediction.action",{"marketName":"区域市场"},function(data) {
+		 $.post("predictionAction!findPrediction.action",{"marketName":"区域市场"},function(data) { 
 		  getContent(data);
        },"json");
 	  }
 	  else if($("select").val()=="domestic"){
 		    // 外部加载json
-		 $.post("172.22.1.152:8080/erpm/predictionAction!findPrediction.action",{"marketName":"国内市场"},function(data) {
+		 $.post("predictionAction!findPrediction.action",{"marketName":"国内市场"},function(data) { 
 		  getContent(data);
        },"json");
 	  }
 	  else if($("select").val()=="Asia"){
 		    // 外部加载json
-		 $.post("172.22.1.152:8080/erpm/predictionAction!findPrediction.action",{"marketName":"亚洲市场"},function(data) {
+		 $.post("predictionAction!findPrediction.action",{"marketName":"亚洲市场"},function(data) { 
 		  getContent(data);
        },"json");
 	  }
 	  else if($("select").val()=="international"){
 		    // 外部加载json
-		 $.post("172.22.1.152:8080/erpm/predictionAction!findPrediction.action",{"marketName":"国际市场"},function(data) {
+		 $.post("predictionAction!findPrediction.action",{"marketName":"国际市场"},function(data) { 
 		  getContent(data);
        },"json");
 	  }
 	 // 绑定事件结束
-	});
-
-
+	});	
+	
+	
 });

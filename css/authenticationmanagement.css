@@ -98,7 +98,7 @@
 	}
 .develop_ISO{
 	min-height:40px;
-	_height:expression((documentElement.clientHeight < 40) ? "40px" : "100%" );/*ie6*/
+	/* _height:expression((documentElement.clientHeight < 40) ? "40px" : "100%" );ie6 */
 	}
 .hassevenli li{
 	width:133px;

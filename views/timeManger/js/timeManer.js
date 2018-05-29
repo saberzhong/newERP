@@ -12,7 +12,7 @@ let loadData = () => {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: 'http://rapapi.org/mockjsdata/32423/test',
+        url: '/erpm/remind/remindAction!workRemind.action',
         success:function(json){
             //投放广告板块
             if(json.isAD==false){

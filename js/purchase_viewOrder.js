@@ -47,8 +47,19 @@ $(function () {
     }, 'json');
   }
 
+   for(let index=1;index<5;index++){
+     var ind =index;
+    var rx=window.sessionStorage.getItem("R"+index);
+    if(rx==undefined) {
+      ind =index-1;
+      continue;
+    }
+    var orderInforTr = $('#orderInforTab tr').eq(ind);
+    orderInforTr.find('td:eq(2)').text(rx); 
+   }
+``
   // 初始化页面时加载全部原料订单
-  findMaterialOrders();
+  // findMaterialOrders();
 
   // 上一页
   $('#prePage').on('click', function () {
